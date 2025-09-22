@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7H FilmSport | Clientes Streaming</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    header p {
+      color: #bbb;
+      margin-top: 10px;
+    }
+
+    .clientes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cliente-card {
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease;
+    }
+
+    .cliente-card:hover {
+      transform: scale(1.03);
+    }
+
+    .cliente-card img {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .cliente-card h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      margin: 10px 0;
+      color: #fff;
+    }
+
+    .cliente-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      min-height: 50px;
+    }
+
+    .cliente-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Streaming 7H FilmSport</h1>
+    <p>Clientes y eventos destacados</p>
+  </header>
+
+  <main>
+    <div class="clientes-grid" id="clientesContainer">
+      <!-- Aquí JS inyecta las tarjetas -->
+    </div>
+  </main>
+
+  <script>
+    async function cargarClientes() {
+      try {
+        const res = await fetch("clientes.json");
+        const clientes = await res.json();
+
+        const container = document.getElementById("clientesContainer");
+        container.innerHTML = "";
+
+        clientes.forEach(cliente => {
+          const card = document.createElement("div");
+          card.className = "cliente-card";
+
+          card.innerHTML = `
+            <img src="${cliente.logo}" alt="${cliente.nombre}">
+            <h2>${cliente.nombre}</h2>
+            <p>${cliente.descripcion}</p>
+            <iframe src="${cliente.playlist}" allowfullscreen></iframe>
+          `;
+
+          container.appendChild(card);
+        });
+
+      } catch (error) {
+        console.error("Error cargando clientes:", error);
+      }
+    }
+
+    cargarClientes();
+  </script>
+
+</body>
+</html>
