@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "M11 Producciones",
+    "logo": "assets/logos/m11.png",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLxxxxxx1",
+    "descripcion": "Cobertura de eventos deportivos y producciones en vivo."
+  },
+  {
+    "nombre": "Liga Premier",
+    "logo": "assets/logos/premier.png",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLxxxxxx2",
+    "descripcion": "Liga de fútbol con transmisión profesional en cada jornada."
+  },
+  {
+    "nombre": "Siempre Fútbol",
+    "logo": "assets/logos/siemprefutbol.png",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLxxxxxx3",
+    "descripcion": "Plataforma de difusión para el fútbol amateur y profesional."
+  },
+  {
+    "nombre": "LIFA",
+    "logo": "assets/logos/lifa.png",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PLxxxxxx4",
+    "descripcion": "Liga Intercolegios de Fútbol de Apoderadas (LIFA)."
+  }
+]
