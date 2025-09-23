@@ -2,6 +2,7 @@
   {
     "id": "m11",
     "nombre": "M11 Producciones",
+    "descripcion": "Productora dedicada a eventos",
     "logo": "assets/m11.png",
     "ultimo_evento": "https://www.youtube.com/embed/Vvt7YFwdTSU?si=wArBZfNB80EyibVg",
     "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY-VYX-4ORDx83OO-v0ccOtZ"
@@ -9,6 +10,7 @@
   {
     "id": "liga",
     "nombre": "Liga Premier",
+    "descripcion": "Torneos profesionales de fútbol",
     "logo": "assets/liga.png",
     "ultimo_evento": "https://www.youtube.com/embed/a1OGU2krY0U?si=J35PGuQGkp41BKF1",
     "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY-RiAoP6hM5bWGDay2p0XKH"
@@ -16,6 +18,7 @@
   {
     "id": "siempre",
     "nombre": "Siempre Futbol",
+    "descripcion": "Cobertura completa de fútbol amateur y profesional",
     "logo": "assets/siempre.png",
     "ultimo_evento": "https://www.youtube.com/embed/NwzP_9TDJV4?si=nFJMq1tgKY-0u9bV",
     "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY9BIPYtceACy99WcVHjF8UC"
@@ -23,6 +26,7 @@
   {
     "id": "lifa",
     "nombre": "LIFA",
+    "descripcion": "Liga de fútbol de apoderadas",
     "logo": "assets/lifa.png",
     "ultimo_evento": "https://www.youtube.com/embed/xZCuf-H5ZyA?si=mfoUYDogAdcqEzw6",
     "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY_yyPvobZbp892ogk5BmEn"
