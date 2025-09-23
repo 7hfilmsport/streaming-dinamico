@@ -21,6 +21,30 @@ header h1 {
   margin: 0;
 }
 
+header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 5px 0 15px 0;
+  color: #cccccc;
+}
+
+.back-button {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #222;
+}
+
 #clients-grid {
   display: flex;
   flex-wrap: wrap;
@@ -58,17 +82,7 @@ header h1 {
   margin: 10px 0 15px 0;
 }
 
-/* Estilos para iframes */
-iframe {
-  width: 100%;
-  height: 450px;
-  border: none;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-#video-container {
+.video-container {
   max-width: 900px;
   margin: 20px auto;
-  padding: 0 10px;
 }
