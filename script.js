@@ -1,31 +1,25 @@
-// script.js
-document.addEventListener("DOMContentLoaded", async () => {
-  const params = new URLSearchParams(window.location.search);
-  const clientId = params.get("id");
+// Obtener parámetros de la URL
+const urlParams = new URLSearchParams(window.location.search);
+const clientId = urlParams.get("id");
 
-  if (!clientId) {
-    document.getElementById("client-name").textContent = "Cliente no encontrado";
-    return;
-  }
+if (clientId) {
+  fetch("clientes.json")
+    .then(response => response.json())
+    .then(data => {
+      const client = data[clientId];
+      if (client) {
+        document.getElementById("client-name").textContent = client.name;
 
-  try {
-    const response = await fetch("clientes.json");
-    const clientes = await response.json();
-
-    const cliente = clientes.find(c => c.id === clientId);
-
-    if (!cliente) {
-      document.getElementById("client-name").textContent = "Cliente no encontrado";
-      return;
-    }
-
-    // Actualizar datos dinámicos
-    document.title = `${cliente.nombre} - 7H Film Sport`;
-    document.getElementById("client-name").textContent = cliente.nombre;
-    document.getElementById("ultimo-evento").src = cliente.ultimo_evento;
-    document.getElementById("playlist").src = cliente.playlist;
-
-  } catch (error) {
-    console.error("Error cargando clientes.json:", error);
-  }
-});
+        document.getElementById("client-content").innerHTML = `
+          <p>${client.description}</p>
+          <iframe src="${client.playlist}" allowfullscreen></iframe>
+        `;
+      } else {
+        document.getElementById("client-content").innerHTML = `<p>Cliente no encontrado.</p>`;
+      }
+    })
+    .catch(error => {
+      console.error("Error cargando clientes.json", error);
+      document.getElementById("client-content").innerHTML = `<p>Error al cargar los datos.</p>`;
+    });
+}
