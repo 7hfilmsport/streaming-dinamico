@@ -10,32 +10,31 @@
 <body>
   <header>
     <img src="assets/logo.png" alt="7H Film Sport Logo" id="logo">
-    <h1 id="client-title">Cliente</h1>
+    <h1 id="cliente-nombre">Cliente</h1>
   </header>
 
   <main>
-    <div class="video-container">
-      <iframe id="ultimo-evento" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <h2>Playlist</h2>
-    <div class="video-container">
-      <iframe id="playlist" src="" frameborder="0" allowfullscreen></iframe>
+    <div id="video-container">
+      <iframe id="ultimo-evento" src="" allowfullscreen></iframe>
+      <iframe id="playlist" src="" allowfullscreen></iframe>
     </div>
   </main>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const clientId = params.get('id');
+    const urlParams = new URLSearchParams(window.location.search);
+    const clienteId = urlParams.get('id');
 
     fetch('clientes.json')
       .then(res => res.json())
-      .then(clients => {
-        const client = clients.find(c => c.id === clientId);
-        if (!client) return;
-
-        document.getElementById('client-title').textContent = client.nombre;
-        document.getElementById('ultimo-evento').src = client.ultimo_evento;
-        document.getElementById('playlist').src = client.playlist;
+      .then(data => {
+        const cliente = data.find(c => c.id === clienteId);
+        if(cliente){
+          document.getElementById('cliente-nombre').textContent = cliente.nombre;
+          document.getElementById('ultimo-evento').src = cliente.ultimo_evento;
+          document.getElementById('playlist').src = cliente.playlist;
+        } else {
+          document.getElementById('cliente-nombre').textContent = 'Cliente no encontrado';
+        }
       });
   </script>
 </body>
