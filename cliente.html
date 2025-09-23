@@ -3,23 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cliente | 7H FilmSport</title>
+  <title>7H Film Sport - Cliente</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <a href="index.html"><img src="assets/logo.png" alt="7H FilmSport Logo" id="logo"></a>
-    <h1 id="client-name">Cargando...</h1>
+    <img src="assets/logo.png" alt="7H Film Sport Logo" id="logo">
+    <h1 id="client-title">Cliente</h1>
   </header>
 
-  <main id="client-content">
-    <p>Cargando información del cliente...</p>
+  <main>
+    <div class="video-container">
+      <iframe id="ultimo-evento" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Playlist</h2>
+    <div class="video-container">
+      <iframe id="playlist" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 7H FilmSport. Todos los derechos reservados.</p>
-  </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const clientId = params.get('id');
+
+    fetch('clientes.json')
+      .then(res => res.json())
+      .then(clients => {
+        const client = clients.find(c => c.id === clientId);
+        if (!client) return;
+
+        document.getElementById('client-title').textContent = client.nombre;
+        document.getElementById('ultimo-evento').src = client.ultimo_evento;
+        document.getElementById('playlist').src = client.playlist;
+      });
+  </script>
 </body>
 </html>
