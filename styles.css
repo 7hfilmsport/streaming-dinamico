@@ -58,18 +58,20 @@ header h1 {
   margin: 10px 0 15px 0;
 }
 
-#client-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+/* Video containers */
+.video-container {
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-#client-content iframe {
+.video-container iframe {
   width: 100%;
-  max-width: 800px;
   height: 450px;
-  margin: 20px 0;
   border: none;
-  border-radius: 12px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 30px;
 }
