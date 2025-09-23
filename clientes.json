@@ -1,22 +1,22 @@
 {
+  "siempre": {
+    "name": "Siempre Futbol",
+    "description": "Medio deportivo que difunde el fútbol local.",
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY9BIPYtceACy99WcVHjF8UC"
+  },
   "m11": {
     "name": "M11 Producciones",
     "description": "Productora dedicada a la transmisión de eventos deportivos.",
-    "playlist": "https://www.youtube.com/embed/videoseries?list=TU_PLAYLIST_ID_M11"
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY-VYX-4ORDx83OO-v0ccOtZ"
   },
   "liga": {
     "name": "Liga Premier",
     "description": "Competencia de alto nivel en fútbol amateur.",
-    "playlist": "https://www.youtube.com/embed/videoseries?list=TU_PLAYLIST_ID_LIGA"
-  },
-  "siempre": {
-    "name": "Siempre Futbol",
-    "description": "Medio deportivo que difunde el fútbol local.",
-    "playlist": "https://www.youtube.com/embed/videoseries?list=TU_PLAYLIST_ID_SIEMPRE"
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY-RiAoP6hM5bWGDay2p0XKH"
   },
   "lifa": {
     "name": "LIFA",
     "description": "Liga Intercolegios de Fútbol Apoderadas.",
-    "playlist": "https://www.youtube.com/embed/videoseries?list=TU_PLAYLIST_ID_LIFA"
+    "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY_yyPvobZbp892ogk5BmEni"
   }
 }
