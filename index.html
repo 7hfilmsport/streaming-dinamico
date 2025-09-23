@@ -20,19 +20,20 @@
   <script>
     fetch('clientes.json')
       .then(res => res.json())
-      .then(clients => {
+      .then(data => {
         const grid = document.getElementById('clients-grid');
-        clients.forEach(client => {
-          const a = document.createElement('a');
-          a.href = `cliente.html?id=${client.id}`;
-          a.className = 'client-card';
-          a.innerHTML = `
-            <img src="${client.logo}" alt="${client.nombre}">
-            <h3>${client.nombre}</h3>
+        data.forEach(cliente => {
+          const card = document.createElement('a');
+          card.className = 'client-card';
+          card.href = `cliente.html?id=${cliente.id}`;
+          card.innerHTML = `
+            <img src="${cliente.logo}" alt="${cliente.nombre}">
+            <h3>${cliente.nombre}</h3>
           `;
-          grid.appendChild(a);
+          grid.appendChild(card);
         });
-      });
+      })
+      .catch(err => console.error('Error cargando clientes:', err));
   </script>
 </body>
 </html>
