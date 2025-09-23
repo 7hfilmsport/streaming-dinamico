@@ -1,61 +1,75 @@
-/* ==========================
-   CLIENTE (plantilla única)
-   ========================== */
-.video-section, .playlist-section {
-  text-align: center;
-  margin: 30px auto;
-  max-width: 1000px;
-  padding: 25px 15px;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #000000, #1a1a1a);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-}
-
-/* Títulos */
-.video-section h2,
-.playlist-section h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2em;
-  margin-bottom: 15px;
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
   color: #ffffff;
 }
 
-/* Último evento: más grande */
-.video-container {
-  position: relative;
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+#logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+#clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.client-card {
+  background-color: #111111;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.client-card:hover {
+  background-color: #222222;
+}
+
+.client-card img {
   width: 100%;
+  height: 140px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #000;
+}
+
+.client-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+
+#client-content {
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 56.25%; /* relación 16:9 */
-  height: 0;
+  padding: 20px;
+  text-align: center;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+#client-content iframe {
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  max-width: 800px;
+  height: 450px;
+  margin: 20px 0;
   border: none;
-}
-
-/* Playlist: más compacta */
-.playlist-container {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-bottom: 35%; /* más baja que el video principal */
-  height: 0;
-}
-
-.playlist-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 12px;
-  border: none;
 }
