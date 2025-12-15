@@ -28,7 +28,7 @@
     "nombre": "LIFA",
     "descripcion": "Liga de fútbol de apoderadas",
     "logo": "assets/lifa.png",
-    "ultimo_evento": "<iframe width="560" height="315" src="https://www.youtube.com/embed/DDJG6B3PXv0?si=BdgyntnFyNHjY4NH&amp;start=4310" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>",
+    "ultimo_evento": "https://www.youtube.com/embed/DDJG6B3PXv0?si=BdgyntnFyNHjY4NH&amp;start=4310",
     "playlist": "https://www.youtube.com/embed/videoseries?list=PL1f3XkUeSIY_yyPvobZbp892ogk5BmEn"
   }
 ]
